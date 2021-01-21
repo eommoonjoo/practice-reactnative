@@ -19,6 +19,7 @@ import Input from './src/Input';
 import Picker from './src/Picker';
 import Icon from './assets/icon.png';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Modal from './src/Modal';
 import { useState } from 'react';
 
 export default function App() {
@@ -73,56 +74,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* <Header appname={appname} />
-      <View>
-        <Text onPress={() => alert('text touch event')}>Hello World</Text>
-      </View> */}
-      {/* <Generator add={onAddRandomNum} />
-      <ScrollView style={{ width: '100%' }} bounces={true}> */}
-      {/* onMometumScrollBegin는 스크롤이 움직이기 시작할 때 트리거를 한다. */}
-      {/* onMomentumScrollEnd는 스크롤의 움직임이 끝낱을 때, 트리거를 한다. */}
-      {/* onScroll는 스크롤의 움직임이 발생했을 때, 바로 트리거를 발생한다. */}
-      {/* onContentSizeChange는 인자로 width, height값을 갖고, 움직일 때마다, 변화된 사이즈를 트리거 한다. */}
-      {/* bounces는 마지막에 통통 튀도록 하는 것을 의미한다. */}
-      {/* <Numblist num={random} delete={onNumDelete} /> */}
-      {/* </ScrollView> */}
-
-      <Picker />
-
-      <TextInput
-        value={myTextInput}
-        style={styles.input}
-        onChangeText={onChangeInput}
-        multiline={true} //개행을 해줌
-        maxLength={100} //100개까지 입력
-        autoCapitalize={'none'} //자동으로 대문자 자동수정을 안함.
-        editable={true} // false이면 입력이 안됩니다.
-      />
-      <Button title='To Do List' onPress={onAddTextInput} />
-
-      <ScrollView style={{ width: '100%' }}>
-        {alphabet.map((item, idx) => (
-          <Text
-            style={styles.mainText}
-            key={idx}
-            onPress={() => onNumDelete(idx)}>
-            {item}
-          </Text>
-        ))}
-      </ScrollView>
-      <>
-        <TouchableOpacity onPress={() => storeData({ name: '엄문주' })}>
-          <Text>정보저장</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={getData}>
-          <Text>정보가져오기</Text>
-        </TouchableOpacity>
-      </>
-      <Image
-        style={styles.image}
-        source={{ uri: 'https://picsum.photos/id/237/200/300' }}
-        onLoadEnd={() => alert('image loaded')}
-      />
+      <Modal />
     </SafeAreaView>
   );
 }
@@ -254,3 +206,72 @@ const styles = StyleSheet.create({
 //     flex: 0.5,
 //   },
 // });
+
+{
+  /* <Header appname={appname} />
+      <View>
+        <Text onPress={() => alert('text touch event')}>Hello World</Text>
+      </View> */
+}
+{
+  /* <Generator add={onAddRandomNum} />
+      <ScrollView style={{ width: '100%' }} bounces={true}> */
+}
+{
+  /* onMometumScrollBegin는 스크롤이 움직이기 시작할 때 트리거를 한다. */
+}
+{
+  /* onMomentumScrollEnd는 스크롤의 움직임이 끝낱을 때, 트리거를 한다. */
+}
+{
+  /* onScroll는 스크롤의 움직임이 발생했을 때, 바로 트리거를 발생한다. */
+}
+{
+  /* onContentSizeChange는 인자로 width, height값을 갖고, 움직일 때마다, 변화된 사이즈를 트리거 한다. */
+}
+{
+  /* bounces는 마지막에 통통 튀도록 하는 것을 의미한다. */
+}
+{
+  /* <Numblist num={random} delete={onNumDelete} /> */
+}
+{
+  /* </ScrollView> */
+}
+
+// <Picker />
+
+// <TextInput
+//   value={myTextInput}
+//   style={styles.input}
+//   onChangeText={onChangeInput}
+//   multiline={true} //개행을 해줌
+//   maxLength={100} //100개까지 입력
+//   autoCapitalize={'none'} //자동으로 대문자 자동수정을 안함.
+//   editable={true} // false이면 입력이 안됩니다.
+// />
+// <Button title='To Do List' onPress={onAddTextInput} />
+
+// <ScrollView style={{ width: '100%' }}>
+//   {alphabet.map((item, idx) => (
+//     <Text
+//       style={styles.mainText}
+//       key={idx}
+//       onPress={() => onNumDelete(idx)}>
+//       {item}
+//     </Text>
+//   ))}
+// </ScrollView>
+// <>
+//   <TouchableOpacity onPress={() => storeData({ name: '엄문주' })}>
+//     <Text>정보저장</Text>
+//   </TouchableOpacity>
+//   <TouchableOpacity onPress={getData}>
+//     <Text>정보가져오기</Text>
+//   </TouchableOpacity>
+// </>
+// <Image
+//   style={styles.image}
+//   source={{ uri: 'https://picsum.photos/id/237/200/300' }}
+//   onLoadEnd={() => alert('image loaded')}
+// />
